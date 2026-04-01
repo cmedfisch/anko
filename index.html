@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~*~AnKo'S wOrLd~*~</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #ff00ff;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" fill="%23ff00ff"/><circle cx="40" cy="40" r="30" fill="%23ffff00" opacity="0.3"/><circle cx="10" cy="10" r="15" fill="%2300ffff" opacity="0.2"/></svg>');
+            margin: 0;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">🐾</text></svg>') 16 16, auto;
+        }
+
+        .construction {
+            text-align: center;
+            padding: 5px;
+            background: repeating-linear-gradient(
+                45deg,
+                #000,
+                #000 10px,
+                #ffff00 10px,
+                #ffff00 20px
+            );
+            color: white;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            font-size: 14px;
+            text-shadow: 2px 2px #ff0000;
+            animation: blink 0.5s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .marquee-top {
+            background: #0000ff;
+            color: #00ff00;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 24px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .visitor-counter {
+            text-align: center;
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 8px;
+            font-size: 18px;
+            border: 3px ridge #c0c0c0;
+            display: inline-block;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title-area {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .title-area h1 {
+            font-family: 'Press Start 2P', 'Comic Sans MS', cursive;
+            font-size: 48px;
+            color: #ffff00;
+            text-shadow: 3px 3px #ff0000, -3px -3px #0000ff, 5px 5px 10px #000;
+            animation: rainbow 2s linear infinite, wobble 0.5s ease-in-out infinite;
+            letter-spacing: 5px;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff0000; }
+            16% { color: #ff8800; }
+            33% { color: #ffff00; }
+            50% { color: #00ff00; }
+            66% { color: #0088ff; }
+            83% { color: #ff00ff; }
+            100% { color: #ff0000; }
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .subtitle {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 22px;
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            animation: blink 1s step-end infinite;
+        }
+
+        .dog-placeholder {
+            width: 250px;
+            height: 250px;
+            border: 5px dashed #ffff00;
+            border-radius: 50%;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            background: radial-gradient(circle, #ff69b4, #ff1493, #ff00ff);
+            animation: spin 4s linear infinite, grow 2s ease-in-out infinite;
+            box-shadow: 0 0 30px #ffff00, 0 0 60px #ff00ff, 0 0 90px #00ffff;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes grow {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+
+        .sparkle-text {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 10px #ffff00, 0 0 20px #ff00ff;
+        }
+
+        .guestbook {
+            background: #000080;
+            border: 4px ridge #c0c0c0;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .guestbook h2 {
+            font-family: 'Comic Sans MS', cursive;
+            color: #ffff00;
+            font-size: 28px;
+            text-shadow: 2px 2px #ff0000;
+        }
+
+        .guestbook p {
+            font-family: 'Comic Sans MS', cursive;
+            color: #00ffff;
+            font-size: 16px;
+        }
+
+        .midi-notice {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            color: #ffff00;
+            background: #800080;
+            border: 3px ridge #c0c0c0;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .links-section {
+            background: #008080;
+            border: 4px ridge #c0c0c0;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .links-section h2 {
+            font-family: 'Comic Sans MS', cursive;
+            color: #ffff00;
+            text-decoration: underline;
+            font-size: 24px;
+        }
+
+        .links-section a {
+            color: #00ff00;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 18px;
+            text-decoration: underline;
+            display: block;
+            margin: 8px 0;
+        }
+
+        .links-section a:hover {
+            color: #ff0000;
+            font-size: 22px;
+        }
+
+        .webring {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            border: 3px double #ffff00;
+            background: #000;
+        }
+
+        .webring img, .webring span {
+            vertical-align: middle;
+        }
+
+        .webring a {
+            color: #00ffff;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 14px;
+        }
+
+        .floating-dog {
+            position: fixed;
+            font-size: 50px;
+            animation: float-around 8s linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .floating-dog:nth-child(1) { animation-delay: 0s; top: 10%; }
+        .floating-dog:nth-child(2) { animation-delay: 2s; top: 30%; }
+        .floating-dog:nth-child(3) { animation-delay: 4s; top: 50%; }
+        .floating-dog:nth-child(4) { animation-delay: 6s; top: 70%; }
+
+        @keyframes float-around {
+            0% { left: -60px; transform: scaleX(1); }
+            49% { transform: scaleX(1); }
+            50% { left: calc(100% + 60px); transform: scaleX(-1); }
+            99% { transform: scaleX(-1); }
+            100% { left: -60px; transform: scaleX(1); }
+        }
+
+        .star-divider {
+            text-align: center;
+            font-size: 30px;
+            animation: rainbow 1s linear infinite;
+            margin: 15px 0;
+            letter-spacing: 10px;
+        }
+
+        .table-layout {
+            width: 100%;
+            border: 3px ridge #c0c0c0;
+            background: #000080;
+        }
+
+        .table-layout td {
+            padding: 10px;
+            border: 2px ridge #c0c0c0;
+            vertical-align: top;
+        }
+
+        .sidebar {
+            width: 150px;
+            background: #800000;
+            font-family: 'Comic Sans MS', cursive;
+            color: #ffff00;
+            font-size: 14px;
+        }
+
+        .sidebar a {
+            color: #00ff00;
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #ff0000;
+            text-decoration: underline overline;
+        }
+
+        .badge-wall {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            margin: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            font-weight: bold;
+            border: 2px outset #c0c0c0;
+        }
+
+        .badge-ie { background: #0078d7; color: white; }
+        .badge-nn { background: #006600; color: white; }
+        .badge-midi { background: #ff6600; color: white; }
+        .badge-noframes { background: #cc0000; color: white; }
+        .badge-anko { background: #ff69b4; color: white; animation: blink 0.8s step-end infinite; }
+
+        .email-me {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .email-me a {
+            color: #ffff00;
+            font-size: 22px;
+            text-shadow: 2px 2px #ff0000;
+            animation: rainbow 3s linear infinite;
+        }
+
+        .copyright {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            color: #c0c0c0;
+            font-size: 12px;
+            padding: 20px;
+            background: #000;
+            border-top: 3px ridge #c0c0c0;
+        }
+
+        .trail {
+            position: fixed;
+            pointer-events: none;
+            font-size: 20px;
+            z-index: 9999;
+            animation: trail-fade 1s forwards;
+        }
+
+        @keyframes trail-fade {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -20px;
+            font-size: 20px;
+            pointer-events: none;
+            z-index: 998;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { top: 105vh; transform: translateX(100px) rotate(720deg); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Floating dogs -->
+<div class="floating-dog">🐕</div>
+<div class="floating-dog">🐶</div>
+<div class="floating-dog">🦴</div>
+<div class="floating-dog">🐾</div>
+
+<!-- Under construction banner -->
+<div class="construction">🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧</div>
+
+<!-- Marquee -->
+<marquee class="marquee-top" behavior="scroll" direction="left" scrollamount="8">
+    ★ Welcome to ANKO'S WORLD!!! ★ The BEST dog on the ENTIRE internet!!! ★ You are visitor number <span id="counter">000482</span>! ★ Last updated: March 2026 ★ Best viewed in Netscape Navigator 4.0 at 800x600 ★ WOOF WOOF WOOF ★
+</marquee>
+
+<div class="main-container">
+
+    <!-- Title -->
+    <div class="title-area">
+        <h1>~*ANKO*~</h1>
+        <p class="subtitle">✨ The World's Greatest Dog ✨</p>
+    </div>
+
+    <!-- Dog placeholder -->
+    <div class="dog-placeholder">🐕</div>
+    <p class="sparkle-text">~ * ~ aNkO's PiCtUrE cOmInG sOoN ~ * ~</p>
+
+    <div class="star-divider">★ ☆ ★ ☆ ★ ☆ ★ ☆ ★</div>
+
+    <!-- MIDI notice -->
+    <div class="midi-notice">
+        🎵 Turn up your speakers!! 🎵<br>
+        This page is best experienced with MIDI music ON!<br>
+        (currently playing: who_let_the_dogs_out.mid)
+    </div>
+
+    <!-- Table layout like a true 90s site -->
+    <table class="table-layout">
+        <tr>
+            <td class="sidebar">
+                <b>~NAVIGATE~</b><br><br>
+                <a href="#">🏠 Home</a>
+                <a href="#">📸 Photos</a>
+                <a href="#">🦴 Tricks</a>
+                <a href="#">💤 Nap Log</a>
+                <a href="#">🍖 Fav Treats</a>
+                <a href="#">📧 Email Me!</a>
+            </td>
+            <td style="background: #000040; color: #ffffff; font-family: 'Comic Sans MS', cursive;">
+                <h2 style="color: #ff69b4; text-align: center; text-shadow: 2px 2px #000;">
+                    ♥ About ANKO ♥
+                </h2>
+                <p style="font-size: 16px; line-height: 1.8;">
+                    <font color="#00ffff">Name:</font> <font color="#ffff00">ANKO</font><br>
+                    <font color="#00ffff">Species:</font> <font color="#ffff00">100% GOOD DOG</font><br>
+                    <font color="#00ffff">Favorite Activity:</font> <font color="#ffff00">Being the BEST BOY/GIRL</font><br>
+                    <font color="#00ffff">Likes:</font> <font color="#ffff00">Treats, Walks, Belly Rubs, Destroying Toys</font><br>
+                    <font color="#00ffff">Dislikes:</font> <font color="#ffff00">The Vacuum, Bath Time, When Humans Leave</font><br>
+                    <font color="#00ffff">Special Skills:</font> <font color="#ffff00">Looking cute, begging for food, zooming around the house at 3am</font><br>
+                </p>
+                <p style="text-align: center; font-size: 20px; animation: blink 1s step-end infinite;">
+                    🐾 ANKO LOVES YOU!!! 🐾
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="star-divider">🐾 🦴 🐾 🦴 🐾 🦴 🐾</div>
+
+    <!-- Guestbook -->
+    <div class="guestbook">
+        <h2>📖 Sign My Guestbook!! 📖</h2>
+        <p>Let Anko know you stopped by!</p>
+        <p style="color: #ff69b4; font-style: italic;">
+            "OMG anko is soooo cute!!!" - DogLover99<br>
+            "best website ever made" - xX_WebMaster_Xx<br>
+            "woof" - Anko (typed with paws)<br>
+        </p>
+        <p style="color: #c0c0c0; font-size: 12px;">(guestbook temporarily offline, please try again in 1999)</p>
+    </div>
+
+    <!-- Links -->
+    <div class="links-section">
+        <h2>~*~ Cool Links ~*~</h2>
+        <a href="#">🐕 Other Dog Pages</a>
+        <a href="#">🌈 Free GIF Animations</a>
+        <a href="#">💾 Download Winamp</a>
+        <a href="#">🔥 GeoCities Ring</a>
+    </div>
+
+    <!-- Badge wall -->
+    <div class="badge-wall">
+        <span class="badge badge-ie">Best viewed in IE 5.0</span>
+        <span class="badge badge-nn">Netscape NOW!</span>
+        <span class="badge badge-midi">MIDI Enabled</span>
+        <span class="badge badge-noframes">No Frames!</span>
+        <span class="badge badge-anko">ANKO APPROVED</span>
+    </div>
+
+    <!-- Webring -->
+    <div class="webring">
+        <span style="color: #ffff00; font-family: 'Comic Sans MS', cursive;">
+            ◀ <a href="#">Prev</a> |
+            🐕 <b style="color: #ff69b4;">DogWeb Ring</b> 🐕 |
+            <a href="#">Next</a> ▶ |
+            <a href="#">Random</a> 🎲
+        </span>
+    </div>
+
+    <!-- Email -->
+    <div class="email-me">
+        <a href="mailto:anko@woofwoof.dog">📧 Email Anko!! 📧</a>
+    </div>
+
+    <!-- Visitor counter -->
+    <div style="text-align: center; margin: 20px 0;">
+        <div class="visitor-counter">
+            YOU ARE VISITOR #<span id="counter2">000482</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- Copyright -->
+<div class="copyright">
+    © 2026 AnKo'S wOrLd - All Rights Reserved<br>
+    Made with 💖 and 🐾 by Anko's Human<br>
+    This site is not responsible for seizures, eye damage, or sudden urges to pet dogs<br>
+    <br>
+    <marquee scrollamount="3" style="color: #ffff00;">★ Thanks for visiting!! Come back soon!! Tell your friends!! WOOF!! ★</marquee>
+</div>
+
+<script>
+    // Mouse trail effect - paw prints follow cursor
+    document.addEventListener('mousemove', function(e) {
+        if (Math.random() > 0.7) {
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            const emojis = ['🐾', '✨', '⭐', '💖', '🦴'];
+            trail.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            document.body.appendChild(trail);
+            setTimeout(() => trail.remove(), 1000);
+        }
+    });
+
+    // Falling paw prints (like snow)
+    function createSnowflake() {
+        const flake = document.createElement('div');
+        flake.className = 'snowflake';
+        const items = ['🐾', '🦴', '⭐', '💖', '🐕'];
+        flake.textContent = items[Math.floor(Math.random() * items.length)];
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.animationDuration = (Math.random() * 3 + 4) + 's';
+        flake.style.fontSize = (Math.random() * 15 + 12) + 'px';
+        document.body.appendChild(flake);
+        setTimeout(() => flake.remove(), 7000);
+    }
+    setInterval(createSnowflake, 300);
+
+    // Increment fake visitor counter
+    let count = 482;
+    setInterval(() => {
+        count++;
+        const padded = String(count).padStart(6, '0');
+        document.getElementById('counter').textContent = padded;
+        document.getElementById('counter2').textContent = padded;
+    }, 5000);
+
+    // Random alert on first visit
+    setTimeout(() => {
+        if (!sessionStorage.getItem('ankoed')) {
+            sessionStorage.setItem('ankoed', 'true');
+        }
+    }, 3000);
+
+    // Cursor sparkle on click
+    document.addEventListener('click', function(e) {
+        for (let i = 0; i < 8; i++) {
+            const spark = document.createElement('div');
+            spark.className = 'trail';
+            spark.style.left = (e.pageX + (Math.random() - 0.5) * 60) + 'px';
+            spark.style.top = (e.pageY + (Math.random() - 0.5) * 60) + 'px';
+            spark.textContent = '✨';
+            document.body.appendChild(spark);
+            setTimeout(() => spark.remove(), 1000);
+        }
+    });
+</script>
+
+</body>
+</html>
